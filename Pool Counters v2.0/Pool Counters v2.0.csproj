@@ -1,0 +1,853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E81A1F72-F0A0-4685-96DB-DD9526EBE5C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Pool_Counters_v2._0</RootNamespace>
+    <AssemblyName>Pool Counters v2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>counter-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Champion.cs" />
+    <Compile Include="ChampionManager.cs" />
+    <Compile Include="ExtraInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtraInfo.Designer.cs">
+      <DependentUpon>ExtraInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoolCounters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoolCounters.Designer.cs">
+      <DependentUpon>PoolCounters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Internal.cs" />
+    <Compile Include="PickOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickOne.Designer.cs">
+      <DependentUpon>PickOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoolForm.Designer.cs">
+      <DependentUpon>PoolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TipsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipsForm.Designer.cs">
+      <DependentUpon>TipsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ExtraInfo.resx">
+      <DependentUpon>ExtraInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoolCounters.resx">
+      <DependentUpon>PoolCounters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickOne.resx">
+      <DependentUpon>PickOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoolForm.resx">
+      <DependentUpon>PoolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipsForm.resx">
+      <DependentUpon>TipsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AatroxSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AhriSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AkaliSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlistarSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmumuSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AniviaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnnieSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApheliosSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AsheSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AurelionSolSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AzirSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BardoSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlitzcrankSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrandSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BraumSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaitlynSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CamilleSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CassiopeiaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cho%27GathSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CorkiSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DariusSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DianaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DravenSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DrMundoSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EkkoSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EliseSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EvelynnSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EzrealSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiddlesticksSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FioraSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FizzSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GalioSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GangplankSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GarenSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GnarSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GragasSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GravesSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HecarimSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeimerdingerSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IllaoiSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IreliaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IvernSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JannaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JarvanIVSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JaxSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JayceSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JhinSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JinxSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kai%27SaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KalistaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KarmaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KarthusSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KassadinSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KatarinaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KayleSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KaynSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KennenSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kha%27ZixSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KindredSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KledSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kog%27MawSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeBlancSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeeSinSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeonaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LilliaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LissandraSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LucianSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuluSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuxSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MalphiteSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MalzaharSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaokaiSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterYiSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MissFortuneSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MordekaiserSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MorganaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NamiSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NasusSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NautilusSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NeekoSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NidaleeSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NocturneSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NunuSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OlafSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OriannaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrnnSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PantheonSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PoppySquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PykeSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QiyanaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuinnSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RakanSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RammusSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rek%27SaiSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RenektonSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RengarSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RivenSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RumbleSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RyzeSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SamiraSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SejuaniSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SennaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeraphineSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShacoSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShenSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShyvanaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SingedSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SionSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SivirSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SkarnerSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SonaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SorakaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwainSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SylasSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SyndraSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TahmKenchSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaliyahSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TalonSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaricSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeemoSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreshSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TristanaSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrundleSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TryndamereSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwistedFateSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwitchSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UdyrSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UrgotSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VarusSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VayneSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VeigarSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vel%27KozSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ViktorSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ViSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VladimirSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VolibearSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarwickSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WukongSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XayahSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XerathSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xin%27ZhaoSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YasuoSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YoneSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YorickSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YuumiSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZacSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZedSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZiggsSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZileanSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZoeSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZyraSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="counter-icon.ico" />
+    <None Include="Resources\GwenSquare.png" />
+    <None Include="Resources\ViegoSquare.png" />
+    <None Include="Resources\RellSquare.png" />
+    <None Include="Resources\WukongInfo.png" />
+    <None Include="Resources\AatroxInfo.png" />
+    <None Include="Resources\unpinWhite.png" />
+    <None Include="Resources\pinWhite.png" />
+    <None Include="Resources\pin1.png" />
+    <None Include="Resources\unpin.png" />
+    <None Include="Resources\pin.png" />
+    <None Include="Resources\ZyraIcon.ico" />
+    <None Include="Resources\ZoeIcon.ico" />
+    <None Include="Resources\ZileanIcon.ico" />
+    <None Include="Resources\ZiggsIcon.ico" />
+    <None Include="Resources\ZedIcon.ico" />
+    <None Include="Resources\ZacIcon.ico" />
+    <None Include="Resources\YuumiIcon.ico" />
+    <None Include="Resources\YorickIcon.ico" />
+    <None Include="Resources\YoneIcon.ico" />
+    <None Include="Resources\YasuoIcon.ico" />
+    <None Include="Resources\XinZhaoIcon.ico" />
+    <None Include="Resources\XerathIcon.ico" />
+    <None Include="Resources\XayahIcon.ico" />
+    <None Include="Resources\WukongIcon.ico" />
+    <None Include="Resources\WarwickIcon.ico" />
+    <None Include="Resources\VolibearIcon.ico" />
+    <None Include="Resources\VladimirIcon.ico" />
+    <None Include="Resources\ViktorIcon.ico" />
+    <None Include="Resources\ViIcon.ico" />
+    <None Include="Resources\Vel%27KozIcon.ico" />
+    <None Include="Resources\VeigarIcon.ico" />
+    <None Include="Resources\VayneIcon.ico" />
+    <None Include="Resources\VarusIcon.ico" />
+    <None Include="Resources\UrgotIcon.ico" />
+    <None Include="Resources\UdyrIcon.ico" />
+    <None Include="Resources\TwitchIcon.ico" />
+    <None Include="Resources\TwistedFateIcon.ico" />
+    <None Include="Resources\TryndamereIcon.ico" />
+    <None Include="Resources\TrundleIcon.ico" />
+    <None Include="Resources\TristanaIcon.ico" />
+    <None Include="Resources\ThreshIcon.ico" />
+    <None Include="Resources\TeemoIcon.ico" />
+    <None Include="Resources\TaricIcon.ico" />
+    <None Include="Resources\TalonIcon.ico" />
+    <None Include="Resources\TaliyahIcon.ico" />
+    <None Include="Resources\TahmKenchIcon.ico" />
+    <None Include="Resources\SyndraIcon.ico" />
+    <None Include="Resources\SylasIcon.ico" />
+    <None Include="Resources\SwainIcon.ico" />
+    <None Include="Resources\SorakaIcon.ico" />
+    <None Include="Resources\SonaIcon.ico" />
+    <None Include="Resources\SkarnerIcon.ico" />
+    <None Include="Resources\SivirIcon.ico" />
+    <None Include="Resources\SionIcon.ico" />
+    <None Include="Resources\SingedIcon.ico" />
+    <None Include="Resources\ShyvanaIcon.ico" />
+    <None Include="Resources\ShenIcon.ico" />
+    <None Include="Resources\ShacoIcon.ico" />
+    <None Include="Resources\SettIcon.ico" />
+    <None Include="Resources\SeraphineIcon.ico" />
+    <None Include="Resources\SennaIcon.ico" />
+    <None Include="Resources\SejuaniIcon.ico" />
+    <None Include="Resources\SamiraIcon.ico" />
+    <None Include="Resources\RyzeIcon.ico" />
+    <None Include="Resources\RumbleIcon.ico" />
+    <None Include="Resources\RivenIcon.ico" />
+    <None Include="Resources\RengarIcon.ico" />
+    <None Include="Resources\RenektonIcon.ico" />
+    <None Include="Resources\Rek%27SaiIcon.ico" />
+    <None Include="Resources\RammusIcon.ico" />
+    <None Include="Resources\RakanIcon.ico" />
+    <None Include="Resources\QuinnIcon.ico" />
+    <None Include="Resources\QiyanaIcon.ico" />
+    <None Include="Resources\PykeIcon.ico" />
+    <None Include="Resources\PoppyIcon.ico" />
+    <None Include="Resources\PantheonIcon.ico" />
+    <None Include="Resources\OrnnIcon.ico" />
+    <None Include="Resources\OriannaIcon.ico" />
+    <None Include="Resources\OlafIcon.ico" />
+    <None Include="Resources\NunuIcon.ico" />
+    <None Include="Resources\NocturneIcon.ico" />
+    <None Include="Resources\NidaleeIcon.ico" />
+    <None Include="Resources\NeekoIcon.ico" />
+    <None Include="Resources\NautilusIcon.ico" />
+    <None Include="Resources\NasusIcon.ico" />
+    <None Include="Resources\NamiIcon.ico" />
+    <None Include="Resources\MorganaIcon.ico" />
+    <None Include="Resources\MordekaiserIcon.ico" />
+    <None Include="Resources\MissFortuneIcon.ico" />
+    <None Include="Resources\MasterYiIcon.ico" />
+    <None Include="Resources\MaokaiIcon.ico" />
+    <None Include="Resources\MalzaharIcon.ico" />
+    <None Include="Resources\MalphiteIcon.ico" />
+    <None Include="Resources\LuxIcon.ico" />
+    <None Include="Resources\LuluIcon.ico" />
+    <None Include="Resources\LucianIcon.ico" />
+    <None Include="Resources\LissandraIcon.ico" />
+    <None Include="Resources\LilliaIcon.ico" />
+    <None Include="Resources\LeonaIcon.ico" />
+    <None Include="Resources\LeeSinIcon.ico" />
+    <None Include="Resources\LeBlancIcon.ico" />
+    <None Include="Resources\Kog%27MawIcon.ico" />
+    <None Include="Resources\KledIcon.ico" />
+    <None Include="Resources\KindredIcon.ico" />
+    <None Include="Resources\Kha%27ZixIcon.ico" />
+    <None Include="Resources\KennenIcon.ico" />
+    <None Include="Resources\KaynIcon.ico" />
+    <None Include="Resources\KayleIcon.ico" />
+    <None Include="Resources\KatarinaIcon.ico" />
+    <None Include="Resources\KassadinIcon.ico" />
+    <None Include="Resources\KarthusIcon.ico" />
+    <None Include="Resources\KarmaIcon.ico" />
+    <None Include="Resources\KalistaIcon.ico" />
+    <None Include="Resources\Kai%27SaIcon.ico" />
+    <None Include="Resources\JinxIcon.ico" />
+    <None Include="Resources\JhinIcon.ico" />
+    <None Include="Resources\JayceIcon.ico" />
+    <None Include="Resources\JaxIcon.ico" />
+    <None Include="Resources\JarvanIVIcon.ico" />
+    <None Include="Resources\JannaIcon.ico" />
+    <None Include="Resources\IvernIcon.ico" />
+    <None Include="Resources\IreliaIcon.ico" />
+    <None Include="Resources\IllaoiIcon.ico" />
+    <None Include="Resources\HeimerdingerIcon.ico" />
+    <None Include="Resources\HecarimIcon.ico" />
+    <None Include="Resources\GravesIcon.ico" />
+    <None Include="Resources\GragasIcon.ico" />
+    <None Include="Resources\GnarIcon.ico" />
+    <None Include="Resources\GarenIcon.ico" />
+    <None Include="Resources\GangplankIcon.ico" />
+    <None Include="Resources\GalioIcon.ico" />
+    <None Include="Resources\FizzIcon.ico" />
+    <None Include="Resources\FioraIcon.ico" />
+    <None Include="Resources\FiddlesticksIcon.ico" />
+    <None Include="Resources\EzrealIcon.ico" />
+    <None Include="Resources\EvelynnIcon.ico" />
+    <None Include="Resources\EliseIcon.ico" />
+    <None Include="Resources\EkkoIcon.ico" />
+    <None Include="Resources\DrMundoIcon.ico" />
+    <None Include="Resources\DravenIcon.ico" />
+    <None Include="Resources\DianaIcon.ico" />
+    <None Include="Resources\DariusIcon.ico" />
+    <None Include="Resources\CorkiIcon.ico" />
+    <None Include="Resources\Cho%27GathIcon.ico" />
+    <None Include="Resources\CassiopeiaIcon.ico" />
+    <None Include="Resources\CamilleIcon.ico" />
+    <None Include="Resources\CaitlynIcon.ico" />
+    <None Include="Resources\BraumIcon.ico" />
+    <None Include="Resources\BrandIcon.ico" />
+    <None Include="Resources\BlitzcrankIcon.ico" />
+    <None Include="Resources\BardoIcon.ico" />
+    <None Include="Resources\AzirIcon.ico" />
+    <None Include="Resources\AurelionSolIcon.ico" />
+    <None Include="Resources\AsheIcon.ico" />
+    <None Include="Resources\ApheliosIcon.ico" />
+    <None Include="Resources\AnnieIcon.ico" />
+    <None Include="Resources\AniviaIcon.ico" />
+    <None Include="Resources\AmumuIcon.ico" />
+    <None Include="Resources\AlistarIcon.ico" />
+    <None Include="Resources\AkaliIcon.ico" />
+    <None Include="Resources\AhriIcon.ico" />
+    <None Include="Resources\AatroxIcon.ico" />
+    <None Include="ExtraInfo\AmumuInfo.png" />
+    <None Include="Resources\YorickInfo.JPG" />
+    <None Include="Resources\WukongInfo.JPG" />
+    <None Include="Resources\VolibearInfo.JPG" />
+    <None Include="Resources\VladimirInfo.JPG" />
+    <None Include="Resources\UrgotInfo.JPG" />
+    <None Include="Resources\TryndamereInfo.JPG" />
+    <None Include="Resources\TristanaInfo.JPG" />
+    <None Include="Resources\TeemoInfo.JPG" />
+    <None Include="Resources\SylasInfo.JPG" />
+    <None Include="Resources\SwainInfo.JPG" />
+    <None Include="Resources\SionInfo.JPG" />
+    <None Include="Resources\SingedInfo.JPG" />
+    <None Include="Resources\ShenInfo.JPG" />
+    <None Include="Resources\SettInfo.JPG" />
+    <None Include="Resources\RyzeInfo.JPG" />
+    <None Include="Resources\RumbleInfo.JPG" />
+    <None Include="Resources\RivenInfo.JPG" />
+    <None Include="Resources\RenektonInfo.JPG" />
+    <None Include="Resources\QuinnInfo.JPG" />
+    <None Include="Resources\PoppyInfo.JPG" />
+    <None Include="Resources\PantheonInfo.JPG" />
+    <None Include="Resources\OrnnInfo.JPG" />
+    <None Include="Resources\OlafInfo.JPG" />
+    <None Include="Resources\NeekoInfo.JPG" />
+    <None Include="Resources\NautilusInfo.JPG" />
+    <None Include="Resources\NasusInfo.JPG" />
+    <None Include="Resources\MordekaiserInfo.JPG" />
+    <None Include="Resources\MaokaiInfo.JPG" />
+    <None Include="Resources\MalphiteInfo.JPG" />
+    <None Include="Resources\LuluInfo.JPG" />
+    <None Include="Resources\LucianInfo.JPG" />
+    <None Include="Resources\LissandraInfo.JPG" />
+    <None Include="Resources\LilliaInfo.JPG" />
+    <None Include="Resources\KledInfo.JPG" />
+    <None Include="Resources\KennenInfo.JPG" />
+    <None Include="Resources\KayleInfo.JPG" />
+    <None Include="Resources\KarmaInfo.JPG" />
+    <None Include="Resources\JayceInfo.JPG" />
+    <None Include="Resources\JaxInfo.JPG" />
+    <None Include="Resources\IreliaInfo.JPG" />
+    <None Include="Resources\IllaoiInfo.JPG" />
+    <None Include="Resources\HecarimInfo.JPG" />
+    <None Include="Resources\GravesInfo.JPG" />
+    <None Include="Resources\GnarInfo.JPG" />
+    <None Include="Resources\GarenInfo.JPG" />
+    <None Include="Resources\GangplankInfo.JPG" />
+    <None Include="Resources\FioraInfo.JPG" />
+    <None Include="Resources\DrMundoInfo.JPG" />
+    <None Include="Resources\DariusInfo.JPG" />
+    <None Include="Resources\ChoGathInfo.JPG" />
+    <None Include="Resources\CassiopeiaInfo.JPG" />
+    <None Include="Resources\CamilleInfo.JPG" />
+    <None Include="Resources\AkaliInfo.JPG" />
+    <None Include="Resources\AatroxInfo.JPG" />
+    <None Include="ExtraInfo\YorickInfo.jpeg" />
+    <None Include="ExtraInfo\WukongInfo.jpeg" />
+    <None Include="ExtraInfo\VolibearInfo.jpeg" />
+    <None Include="ExtraInfo\VladimirInfo.jpeg" />
+    <None Include="ExtraInfo\TryndamereInfo.jpg" />
+    <None Include="ExtraInfo\TristanaInfo.jpg" />
+    <None Include="ExtraInfo\TeemoInfo.jpg" />
+    <None Include="ExtraInfo\SylasInfo.jpg" />
+    <None Include="ExtraInfo\SwainInfo.jpg" />
+    <None Include="ExtraInfo\SionInfo.jpg" />
+    <None Include="ExtraInfo\SingedInfo.jpg" />
+    <None Include="ExtraInfo\ShenInfo.jpg" />
+    <None Include="ExtraInfo\SettInfo.jpg" />
+    <None Include="ExtraInfo\RyzeInfo.jpeg" />
+    <None Include="ExtraInfo\RivenInfo.jpeg" />
+    <None Include="ExtraInfo\RenektonInfo.jpeg" />
+    <None Include="ExtraInfo\QuinnInfo.jpeg" />
+    <None Include="ExtraInfo\PoppyInfo.jpeg" />
+    <None Include="ExtraInfo\PantheonInfo.jpeg" />
+    <None Include="ExtraInfo\OrnnInfo.jpeg" />
+    <None Include="ExtraInfo\OlafInfo.jpeg" />
+    <None Include="ExtraInfo\NeekoInfo.jpeg" />
+    <None Include="ExtraInfo\NautilusInfo.jpeg" />
+    <None Include="ExtraInfo\MordekaiserInfo.jpeg" />
+    <None Include="ExtraInfo\LuluInfo.jpeg" />
+    <None Include="ExtraInfo\LucianInfo.jpeg" />
+    <None Include="ExtraInfo\LilliaInfo.jpeg" />
+    <None Include="ExtraInfo\KledInfo.jpeg" />
+    <None Include="ExtraInfo\KennenInfo.jpeg" />
+    <None Include="ExtraInfo\KayleInfo.jpeg" />
+    <None Include="ExtraInfo\KarmaInfo.jpeg" />
+    <None Include="ExtraInfo\JayceInfo.jpeg" />
+    <None Include="ExtraInfo\JaxInfo.jpeg" />
+    <None Include="ExtraInfo\IreliaInfo.jpeg" />
+    <None Include="ExtraInfo\IllaoiInfo.jpeg" />
+    <None Include="ExtraInfo\HecarimInfo.jpeg" />
+    <None Include="ExtraInfo\GravesInfo.jpeg" />
+    <None Include="ExtraInfo\GnarInfo.jpeg" />
+    <None Include="ExtraInfo\GarenInfo.jpeg" />
+    <None Include="ExtraInfo\GangplankInfo.jpeg" />
+    <None Include="ExtraInfo\FioraInfo.jpeg" />
+    <None Include="ExtraInfo\DrMundoInfo.jpeg" />
+    <None Include="ExtraInfo\DariusInfo.jpeg" />
+    <None Include="ExtraInfo\ChoGathInfo.jpeg" />
+    <None Include="ExtraInfo\CassiopeiaInfo.jpeg" />
+    <None Include="ExtraInfo\CamilleInfo.jpeg" />
+    <None Include="ExtraInfo\AkaliInfo.jpeg" />
+    <None Include="ExtraInfo\AatroxInfo.jpeg" />
+    <None Include="Resources\Top.png" />
+    <None Include="Resources\BackgroundRight.png" />
+    <None Include="Resources\BackgroundLeft.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
