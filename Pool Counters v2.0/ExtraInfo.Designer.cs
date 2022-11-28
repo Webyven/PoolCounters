@@ -29,35 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExtraInfo));
-            this.btnPin = new System.Windows.Forms.PictureBox();
             this.pctMain = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPin)).BeginInit();
+            this.btnPin = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPin)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnPin
-            // 
-            this.btnPin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPin.BackColor = System.Drawing.Color.Black;
-            this.btnPin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPin.Image = ((System.Drawing.Image)(resources.GetObject("btnPin.Image")));
-            this.btnPin.Location = new System.Drawing.Point(957, 12);
-            this.btnPin.Name = "btnPin";
-            this.btnPin.Size = new System.Drawing.Size(15, 15);
-            this.btnPin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnPin.TabIndex = 20;
-            this.btnPin.TabStop = false;
-            this.btnPin.Click += new System.EventHandler(this.btnPin_Click);
             // 
             // pctMain
             // 
+            this.pctMain.BackColor = System.Drawing.Color.Black;
             this.pctMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pctMain.Location = new System.Drawing.Point(0, 0);
             this.pctMain.Name = "pctMain";
             this.pctMain.Size = new System.Drawing.Size(984, 411);
-            this.pctMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctMain.TabIndex = 0;
             this.pctMain.TabStop = false;
+            // 
+            // btnPin
+            // 
+            this.btnPin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPin.BackColor = System.Drawing.Color.Transparent;
+            this.btnPin.FillColor = System.Drawing.Color.Transparent;
+            this.btnPin.Image = global::Pool_Counters_v2._0.Properties.Resources.pinWhite;
+            this.btnPin.Location = new System.Drawing.Point(957, 12);
+            this.btnPin.Name = "btnPin";
+            this.btnPin.ShadowDecoration.Parent = this.btnPin;
+            this.btnPin.Size = new System.Drawing.Size(15, 15);
+            this.btnPin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnPin.TabIndex = 21;
+            this.btnPin.TabStop = false;
+            this.btnPin.UseTransparentBackground = true;
+            this.btnPin.Click += new System.EventHandler(this.btnPin_Click);
             // 
             // ExtraInfo
             // 
@@ -74,8 +77,8 @@
             this.Name = "ExtraInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Extra Info";
-            ((System.ComponentModel.ISupportInitialize)(this.btnPin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,6 +86,6 @@
         #endregion
 
         public System.Windows.Forms.PictureBox pctMain;
-        private System.Windows.Forms.PictureBox btnPin;
+        private Guna.UI2.WinForms.Guna2PictureBox btnPin;
     }
 }

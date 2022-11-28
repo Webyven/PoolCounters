@@ -6,26 +6,30 @@ using System.Threading.Tasks;
 
 namespace Pool_Counters_v2._0
 {
-    class ChampionManager
+    public static class ChampionManager
     {
-        List<Champion> champions;
+        static List<Champion> champions = new List<Champion>();
 
-        public ChampionManager()
+        public static void AddChamp(Champion champ)
         {
-            champions = new List<Champion>();
+            champions.Add(champ);
         }
 
-        public void AddChamp(Champion champ)
+        public static List<Champion> GetChampions()
         {
-            this.champions.Add(champ);
+            return champions;
         }
 
-        public List<Champion> GetChampions()
+        public static List<string> GetChampionsNames()
         {
-            return this.champions;
+            List<string> res = new List<string>();
+            foreach (var item in champions)
+                res.Add(item.GetName());
+
+            return res;
         }
 
-        public Champion UniversalFindChamp(string name)
+        public static Champion UniversalFindChamp(string name)
         {
             Champion result;
             result = FindChamp(Modules.Internal.UppercaseFirst(name));
@@ -36,7 +40,7 @@ namespace Pool_Counters_v2._0
             return result;
         }
 
-        private Champion FindChamp(string name)
+        private static Champion FindChamp(string name)
         {
             Champion result;
             result = FindChampByName(name);
@@ -47,7 +51,7 @@ namespace Pool_Counters_v2._0
             return result;
         }
 
-        private Champion FindChampByAlias(string name)
+        private static Champion FindChampByAlias(string name)
         {
             foreach(Champion champ in champions)
             {
@@ -55,7 +59,7 @@ namespace Pool_Counters_v2._0
                 {
                     foreach(string alias in champ.GetAlias())
                     {
-                        if (alias == name)
+                        if (alias.ToLower() == name.ToLower())
                             return champ;
                     }
                 }
@@ -64,11 +68,11 @@ namespace Pool_Counters_v2._0
             return null;
         }
 
-        private Champion FindChampByName(string name)
+        private static Champion FindChampByName(string name)
         {
             foreach(Champion champ in champions)
             {
-                if (champ.GetName() == name)
+                if (champ.GetName().ToLower() == name.ToLower())
                     return champ;
             }
 

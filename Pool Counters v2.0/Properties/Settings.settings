@@ -1,7 +1,60 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Pool_Counters_v2._0.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="mainLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="lastChamp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="champsCount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="counters" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="firstGradientColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">25, 25, 25</Value>
+    </Setting>
+    <Setting Name="secGradientColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">12, 12, 12</Value>
+    </Setting>
+    <Setting Name="gradientMode" Type="System.Drawing.Drawing2D.LinearGradientMode" Scope="User">
+      <Value Profile="(Default)">Horizontal</Value>
+    </Setting>
+    <Setting Name="playerRoleSolo" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="playerRoleFlex" GenerateDefaultValueInCode="false" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="poolSolo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">["Teemo","Teemo","Teemo","Teemo","Teemo","Teemo"]</Value>
+    </Setting>
+    <Setting Name="poolFlex" Type="System.String" Scope="User">
+      <Value Profile="(Default)">["Teemo","Teemo","Teemo","Teemo","Teemo","Teemo"]</Value>
+    </Setting>
+    <Setting Name="playerNickname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Your nickname here</Value>
+    </Setting>
+    <Setting Name="playerRealNickname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TeemoDacy</Value>
+    </Setting>
+    <Setting Name="lastPageUsed" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="rolePadding" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="applyToAllGradients" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="draftMusic" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="spells" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
 </SettingsFile>

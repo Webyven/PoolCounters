@@ -7,28 +7,26 @@ using System.Threading.Tasks;
 
 namespace Pool_Counters_v2._0
 {
-    class Champion
+    public class Champion
     {
         private string name;
-        private string tip;
-        private string[] cds;
-        private int games;
-        private int objGames;
         private Image square;
         private Image info;
         private List<string> alias;
-        private List<Champion> veryGoodAgainst;
-        private List<Champion> goodAgainst;
-        private List<Champion> mediumAgainst;
+
+        private List<Champion> allCounters;
+        public List<Champion> veryGoodAgainst { get; private set; }
+        public List<Champion> goodAgainst { get; private set; }
+        public List<Champion> mediumAgainst { get; private set; }
+
 
         public Champion()
         {
+            allCounters = new List<Champion>();
             veryGoodAgainst = new List<Champion>();
             goodAgainst = new List<Champion>();
             mediumAgainst = new List<Champion>();
             alias = new List<string>();
-            games = 0;
-            objGames = 0;
         }
 
         public void SetName(string name)
@@ -61,19 +59,40 @@ namespace Pool_Counters_v2._0
             return this.alias;
         }
 
-        public void AddVeryCounter(Champion champ)
+        public void AddCounter(Champion champion)
         {
-            veryGoodAgainst.Add(champ);
+            allCounters.Add(champion);
         }
 
-        public void AddGoodCounter(Champion champ)
+        private void ClearCounters()
         {
-            goodAgainst.Add(champ);
+            this.veryGoodAgainst.Clear();
+            this.goodAgainst.Clear();
+            this.mediumAgainst.Clear();
         }
 
-        public void AddMediumCounter(Champion champ)
+        public void RedistributeCounters()
         {
-            mediumAgainst.Add(champ);
+            ClearCounters();
+
+            for(int i = 0; i < allCounters.Count; i++)
+            {
+                if (i < allCounters.Count / 3)
+                    this.veryGoodAgainst.Add(allCounters[i]);
+
+                else if (i < (allCounters.Count * 2) / 3)
+                    this.goodAgainst.Add(allCounters[i]);
+
+                else
+                    this.mediumAgainst.Add(allCounters[i]);
+            }
+
+            allCounters.Clear();
+        }
+
+        public List<Champion> GetCounters()
+        {
+            return allCounters;
         }
 
         public bool Counters(Champion champ, out int amount)
@@ -95,16 +114,6 @@ namespace Pool_Counters_v2._0
             return true;
         }
 
-        public void SetTips(string tip)
-        {
-            this.tip = tip;
-        }
-
-        public string GetTips()
-        {
-            return this.tip;
-        }
-
         public void SetInfo(Image info)
         {
             this.info = info;
@@ -113,46 +122,6 @@ namespace Pool_Counters_v2._0
         public Image GetInfo()
         {
             return this.info;
-        }
-
-        public void SetCDs(string[] cds)
-        {
-            this.cds = cds;
-        }
-
-        public string[] GetCDs()
-        {
-            return this.cds;
-        }
-
-        public void SetGames(int games)
-        {
-            this.games = games;
-        }
-
-        public void AddGame()
-        {
-            this.games++;
-        }
-
-        public void SubGame()
-        {
-            this.games--;
-        }
-
-        public int GetGames()
-        {
-            return this.games;
-        }
-
-        public void SetObjGames(int games)
-        {
-            this.objGames = games;
-        }
-
-        public int GetObjGames()
-        {
-            return this.objGames;
         }
     }
 }

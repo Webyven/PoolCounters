@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,13 +23,21 @@ namespace Pool_Counters_v2._0
             if (e.KeyCode == Keys.S)
                 btnSoloQ.PerformClick();
 
-            if (e.KeyCode == Keys.T)
+            if (e.KeyCode == Keys.F)
                 btnTEA.PerformClick();
+
+            if (e.KeyCode == Keys.Escape)
+                Application.Exit();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnSoloQ_MouseEnter(object sender, EventArgs e)
         {
-            Application.Exit();
+            ((Guna2Button)sender).BackgroundImage = Properties.Resources.CounterControlBackground;
+        }
+
+        private void btnSoloQ_MouseLeave(object sender, EventArgs e)
+        {
+            ((Guna2Button)sender).BackgroundImage = null;
         }
     }
 }

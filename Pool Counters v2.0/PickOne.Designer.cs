@@ -28,68 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PickOne));
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnSoloQ = new System.Windows.Forms.Button();
-            this.btnTEA = new System.Windows.Forms.Button();
+            this.btnTEA = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSoloQ = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(49, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Choose mode";
             // 
-            // btnExit
+            // btnTEA
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(165, 5);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(15, 15);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnTEA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTEA.BorderColor = System.Drawing.Color.White;
+            this.btnTEA.BorderRadius = 5;
+            this.btnTEA.BorderThickness = 1;
+            this.btnTEA.CheckedState.Parent = this.btnTEA;
+            this.btnTEA.CustomImages.Parent = this.btnTEA;
+            this.btnTEA.FillColor = System.Drawing.Color.Transparent;
+            this.btnTEA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTEA.ForeColor = System.Drawing.Color.White;
+            this.btnTEA.HoverState.Parent = this.btnTEA;
+            this.btnTEA.Image = ((System.Drawing.Image)(resources.GetObject("btnTEA.Image")));
+            this.btnTEA.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnTEA.Location = new System.Drawing.Point(98, 45);
+            this.btnTEA.Name = "btnTEA";
+            this.btnTEA.ShadowDecoration.Parent = this.btnTEA;
+            this.btnTEA.Size = new System.Drawing.Size(75, 35);
+            this.btnTEA.TabIndex = 5;
+            this.btnTEA.Text = "Flex";
+            this.btnTEA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnTEA.MouseEnter += new System.EventHandler(this.btnSoloQ_MouseEnter);
+            this.btnTEA.MouseLeave += new System.EventHandler(this.btnSoloQ_MouseLeave);
             // 
             // btnSoloQ
             // 
-            this.btnSoloQ.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSoloQ.Location = new System.Drawing.Point(13, 37);
+            this.btnSoloQ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSoloQ.BorderColor = System.Drawing.Color.White;
+            this.btnSoloQ.BorderRadius = 5;
+            this.btnSoloQ.BorderThickness = 1;
+            this.btnSoloQ.CheckedState.Parent = this.btnSoloQ;
+            this.btnSoloQ.CustomImages.Parent = this.btnSoloQ;
+            this.btnSoloQ.FillColor = System.Drawing.Color.Transparent;
+            this.btnSoloQ.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSoloQ.ForeColor = System.Drawing.Color.White;
+            this.btnSoloQ.HoverState.Parent = this.btnSoloQ;
+            this.btnSoloQ.Image = ((System.Drawing.Image)(resources.GetObject("btnSoloQ.Image")));
+            this.btnSoloQ.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnSoloQ.ImageOffset = new System.Drawing.Point(-1, -1);
+            this.btnSoloQ.Location = new System.Drawing.Point(12, 45);
             this.btnSoloQ.Name = "btnSoloQ";
-            this.btnSoloQ.Size = new System.Drawing.Size(75, 23);
-            this.btnSoloQ.TabIndex = 2;
-            this.btnSoloQ.Text = "SoloQ";
-            this.btnSoloQ.UseVisualStyleBackColor = true;
+            this.btnSoloQ.ShadowDecoration.Parent = this.btnSoloQ;
+            this.btnSoloQ.Size = new System.Drawing.Size(75, 35);
+            this.btnSoloQ.TabIndex = 4;
+            this.btnSoloQ.Text = "Solo";
+            this.btnSoloQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSoloQ.MouseEnter += new System.EventHandler(this.btnSoloQ_MouseEnter);
+            this.btnSoloQ.MouseLeave += new System.EventHandler(this.btnSoloQ_MouseLeave);
             // 
-            // btnTEA
+            // guna2Elipse1
             // 
-            this.btnTEA.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnTEA.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnTEA.Location = new System.Drawing.Point(98, 37);
-            this.btnTEA.Name = "btnTEA";
-            this.btnTEA.Size = new System.Drawing.Size(75, 23);
-            this.btnTEA.TabIndex = 3;
-            this.btnTEA.Text = "TEA";
-            this.btnTEA.UseVisualStyleBackColor = true;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // PickOne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(185, 72);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.ClientSize = new System.Drawing.Size(185, 95);
             this.Controls.Add(this.btnTEA);
             this.Controls.Add(this.btnSoloQ);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -98,10 +116,9 @@
             this.MinimizeBox = false;
             this.Name = "PickOne";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PickOne";
+            this.Text = "Choose mode";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PickOne_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -111,8 +128,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Button btnExit;
-        public System.Windows.Forms.Button btnSoloQ;
-        public System.Windows.Forms.Button btnTEA;
+        public Guna.UI2.WinForms.Guna2Button btnSoloQ;
+        public Guna.UI2.WinForms.Guna2Button btnTEA;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

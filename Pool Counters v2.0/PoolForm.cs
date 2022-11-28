@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,43 +12,39 @@ using System.Windows.Forms;
 
 namespace Pool_Counters_v2._0
 {
-    public partial class PoolForm : Form
+    public partial class PoolForm : Form, ITitleable
     {
         public bool pinned = false;
-        public const string wallFile = "wall.pc";
-        public const string configFile = "config.pc";
         public int games;
+        public bool SoloQ;
+        private readonly Action RefreshSizes;
 
-        public PoolForm()
+        const string pageOpGG = @"https://las.op.gg/summoner/userName=";
+        const string pageLeagueOfGraphs = @"https://www.leagueofgraphs.com/es/summoner/las/";
+
+        public Guna2GradientPanel titleBar => this.MainGradientPanel;
+
+        public PoolForm(bool SoloQ, Action RefreshSizes)
         {
             InitializeComponent();
-            ReadConfig();
+
+            this.SoloQ = SoloQ;
+            this.RefreshSizes = RefreshSizes;
+            this.guna2Elipse.BorderRadius = 15;
+
+            LoadConfig();
         }
 
-        private void ReadConfig()
+        private void LoadConfig()
         {
-            string wallPath = Path.Combine("files", wallFile);
-            string configPath = Path.Combine("files", configFile);
+            string rolePath = SoloQ ? Properties.Settings.Default.playerRoleSolo : Properties.Settings.Default.playerRoleFlex;
 
-            if (File.Exists(wallPath))
-            {
-                this.BackgroundImage = (Bitmap)Bitmap.FromFile(File.ReadAllText(wallPath));
-            }
-        }
+            this.pctRole.Image = File.Exists(rolePath) ? Image.FromFile(rolePath) : Properties.Resources.Top;
+            this.lblOpGg.Text = Properties.Settings.Default.playerNickname;
+            this.pctRole.Padding = new Padding(Properties.Settings.Default.rolePadding);
 
-        private void WriteConfig(string filePath)
-        {
-            string wallPath = Path.Combine("files", wallFile);
-
-            File.WriteAllText(wallPath, filePath);
-        }
-
-        private void DeleteConfig()
-        {
-            string path = Path.Combine("files", wallFile);
-
-            if (File.Exists(path))
-                File.Delete(path);
+            Properties.Settings.Default.PropertyChanged += (object s, PropertyChangedEventArgs e) => { this.UpdatePoolGradient(); };
+            this.UpdatePoolGradient();
         }
 
         private void btnPin_Click(object sender, EventArgs e)
@@ -55,53 +52,65 @@ namespace Pool_Counters_v2._0
             if (!pinned)
             {
                 this.TopMost = true;
-                this.btnPin.Image = Properties.Resources.unpin;
+                this.btnPin.Image = Properties.Resources.unpinWhite;
                 pinned = true;
             }
             else
             {
                 this.TopMost = false;
-                this.btnPin.Image = Properties.Resources.pin;
+                this.btnPin.Image = Properties.Resources.pinWhite;
                 pinned = false;
             }
         }
 
-        private void PoolForm_DragDrop(object sender, DragEventArgs e)
-        {
-            string[] filePaths = (string[])e.Data.GetData(DataFormats.FileDrop, false);
-
-            Bitmap bitmap = new Bitmap(Bitmap.FromFile(filePaths[0]));
-
-            this.BackgroundImage = bitmap;
-            //this.BackgroundImageLayout = ImageLayout.Center;
-
-            WriteConfig(filePaths[0]);
-        }
-
-        private void PoolForm_DragEnter(object sender, DragEventArgs e)
-        {
-            e.Effect = DragDropEffects.Copy;
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            this.BackgroundImage = null;
-            DeleteConfig();
-        }
-
         private void opGGToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InitPage(@"https://las.op.gg/summoner/userName=" + lblOpGg.Text);
+            Properties.Settings.Default.lastPageUsed = pageOpGG;
+            InitPage(pageOpGG + Properties.Settings.Default.playerRealNickname);
         }
 
         private void leagueOfGraphsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InitPage(@"https://www.leagueofgraphs.com/es/summoner/las/" + lblOpGg.Text);
+            Properties.Settings.Default.lastPageUsed = pageLeagueOfGraphs;
+            InitPage(pageLeagueOfGraphs + Properties.Settings.Default.playerRealNickname);
         }
 
         private void InitPage(string pagePath)
         {
             System.Diagnostics.Process.Start(pagePath);
+        }
+
+        private void btnAppearance_Click(object sender, EventArgs e)
+        {
+            ExecuteSettingsForm(new fAppearance());
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            ExecuteSettingsForm(new fPlayerSettings(SoloQ));
+        }
+
+        private void ExecuteSettingsForm(Form form)
+        {
+            if(form.ShowDialog() == DialogResult.OK)
+            {
+                Properties.Settings.Default.Save();
+                LoadConfig();
+                RefreshSizes();
+            }
+        }
+
+        private void lblOpGg_Click(object sender, MouseEventArgs e)
+        {
+            string lastPageUsed = string.IsNullOrEmpty(Properties.Settings.Default.lastPageUsed) ? pageOpGG : Properties.Settings.Default.lastPageUsed;
+
+            if(e.Button == MouseButtons.Left)
+                InitPage(lastPageUsed + Properties.Settings.Default.playerRealNickname);
+        }
+
+        private void PoolForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
         }
     }
 }
