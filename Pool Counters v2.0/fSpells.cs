@@ -16,21 +16,41 @@ namespace Pool_Counters_v2._0
     {
         Guna2GradientPanel ITitleable.titleBar => this.titleBar;
         IKeyboardMouseEvents m_GlobalHook;
-        int? actualFocus = null;
+        SpellControl[,] spells = new SpellControl[5,2];
+        int[,] actualFocus = new int[1, 2] { { 0, 0 } }; 
 
         public fSpells()
         {
             InitializeComponent();
+            InitializeSpellsControls();
 
             guna2Elipse2.BorderRadius = 15;
             m_GlobalHook = Hook.GlobalEvents();
             m_GlobalHook.KeyDown += M_GlobalHook_KeyDown;
 
             foreach (Spell spell in SpellManager.GetSpells())
-            {
-                Controls.Add(new SpellControl(spell, menuSpells) { Dock = DockStyle.Fill });
-
                 menuSpells.Items.Add(spell.Name, spell.Icon);
+        }
+
+        private void InitializeSpellsControls()
+        {
+            spells[0, 0] = this.spellTopD;
+            spells[0, 1] = this.spellTopF;
+            spells[1, 0] = this.spellJungleD;
+            spells[1, 1] = this.spellJungleF;
+            spells[2, 0] = this.spellMiddleD;
+            spells[2, 1] = this.spellMiddleF;
+            spells[3, 0] = this.spellCarryD;
+            spells[3, 1] = this.spellCarryF;
+            spells[4, 0] = this.spellSupportD;
+            spells[4, 1] = this.spellSupportF;
+
+            Spell[,] defaultSpells = SpellManager.DefaultSpells();
+
+            for(int i = 0; i < 5; i++)
+            {
+                for (int k = 0; k < 2; k++)
+                    spells[i, k].SetSpell(defaultSpells[i, k]);
             }
         }
 

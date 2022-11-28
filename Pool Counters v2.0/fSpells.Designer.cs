@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSpells));
             this.titleBar = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pctTitleBar = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -51,6 +51,16 @@
             this.editToolTip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.menuSpells = new Weby.CustomControls.Controls.DropDownMenu.WebyDropdownMenu(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.spellTopD = new Pool_Counters_v2._0.SpellControl();
+            this.spellJungleD = new Pool_Counters_v2._0.SpellControl();
+            this.spellMiddleD = new Pool_Counters_v2._0.SpellControl();
+            this.spellSupportD = new Pool_Counters_v2._0.SpellControl();
+            this.spellCarryD = new Pool_Counters_v2._0.SpellControl();
+            this.spellTopF = new Pool_Counters_v2._0.SpellControl();
+            this.spellJungleF = new Pool_Counters_v2._0.SpellControl();
+            this.spellMiddleF = new Pool_Counters_v2._0.SpellControl();
+            this.spellSupportF = new Pool_Counters_v2._0.SpellControl();
+            this.spellCarryF = new Pool_Counters_v2._0.SpellControl();
             this.titleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctTitleBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,7 +74,7 @@
             // titleBar
             // 
             this.titleBar.BackColor = System.Drawing.Color.Black;
-            this.titleBar.Controls.Add(this.guna2ImageButton2);
+            this.titleBar.Controls.Add(this.btnPlay);
             this.titleBar.Controls.Add(this.guna2ImageButton1);
             this.titleBar.Controls.Add(this.guna2ControlBox1);
             this.titleBar.Controls.Add(this.pctTitleBar);
@@ -78,24 +88,24 @@
             this.titleBar.Size = new System.Drawing.Size(280, 30);
             this.titleBar.TabIndex = 4;
             // 
-            // guna2ImageButton2
+            // btnPlay
             // 
-            this.guna2ImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(155, 0);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(13, 13);
-            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Size = new System.Drawing.Size(40, 30);
-            this.guna2ImageButton2.TabIndex = 6;
-            this.playToolTip.SetToolTip(this.guna2ImageButton2, "Click <strong>when the game starts</strong>\r\n<br>\r\nto start tracking spell cooldo" +
+            this.btnPlay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.CheckedState.Parent = this.btnPlay;
+            this.btnPlay.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPlay.HoverState.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnPlay.HoverState.Parent = this.btnPlay;
+            this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
+            this.btnPlay.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnPlay.Location = new System.Drawing.Point(155, 0);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.PressedState.ImageSize = new System.Drawing.Size(13, 13);
+            this.btnPlay.PressedState.Parent = this.btnPlay;
+            this.btnPlay.Size = new System.Drawing.Size(40, 30);
+            this.btnPlay.TabIndex = 6;
+            this.playToolTip.SetToolTip(this.btnPlay, "Click <strong>when the game starts</strong>\r\n<br>\r\nto start tracking spell cooldo" +
         "wns.");
-            this.guna2ImageButton2.UseTransparentBackground = true;
+            this.btnPlay.UseTransparentBackground = true;
             // 
             // guna2ImageButton1
             // 
@@ -158,7 +168,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 59);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +178,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(20, 118);
+            this.pictureBox2.Location = new System.Drawing.Point(23, 119);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +188,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(20, 178);
+            this.pictureBox3.Location = new System.Drawing.Point(23, 179);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,7 +198,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(20, 238);
+            this.pictureBox4.Location = new System.Drawing.Point(23, 299);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +208,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(20, 298);
+            this.pictureBox5.Location = new System.Drawing.Point(23, 239);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -274,6 +284,96 @@
             // 
             this.guna2Elipse2.TargetControl = this.menuSpells;
             // 
+            // spellTopD
+            // 
+            this.spellTopD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellTopD.Location = new System.Drawing.Point(80, 55);
+            this.spellTopD.Margin = new System.Windows.Forms.Padding(5);
+            this.spellTopD.Name = "spellTopD";
+            this.spellTopD.Size = new System.Drawing.Size(50, 50);
+            this.spellTopD.TabIndex = 11;
+            // 
+            // spellJungleD
+            // 
+            this.spellJungleD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellJungleD.Location = new System.Drawing.Point(80, 115);
+            this.spellJungleD.Margin = new System.Windows.Forms.Padding(5);
+            this.spellJungleD.Name = "spellJungleD";
+            this.spellJungleD.Size = new System.Drawing.Size(50, 50);
+            this.spellJungleD.TabIndex = 12;
+            // 
+            // spellMiddleD
+            // 
+            this.spellMiddleD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellMiddleD.Location = new System.Drawing.Point(80, 175);
+            this.spellMiddleD.Margin = new System.Windows.Forms.Padding(5);
+            this.spellMiddleD.Name = "spellMiddleD";
+            this.spellMiddleD.Size = new System.Drawing.Size(50, 50);
+            this.spellMiddleD.TabIndex = 13;
+            // 
+            // spellSupportD
+            // 
+            this.spellSupportD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellSupportD.Location = new System.Drawing.Point(80, 295);
+            this.spellSupportD.Margin = new System.Windows.Forms.Padding(5);
+            this.spellSupportD.Name = "spellSupportD";
+            this.spellSupportD.Size = new System.Drawing.Size(50, 50);
+            this.spellSupportD.TabIndex = 14;
+            // 
+            // spellCarryD
+            // 
+            this.spellCarryD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellCarryD.Location = new System.Drawing.Point(80, 235);
+            this.spellCarryD.Margin = new System.Windows.Forms.Padding(5);
+            this.spellCarryD.Name = "spellCarryD";
+            this.spellCarryD.Size = new System.Drawing.Size(50, 50);
+            this.spellCarryD.TabIndex = 15;
+            // 
+            // spellTopF
+            // 
+            this.spellTopF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellTopF.Location = new System.Drawing.Point(143, 55);
+            this.spellTopF.Margin = new System.Windows.Forms.Padding(5);
+            this.spellTopF.Name = "spellTopF";
+            this.spellTopF.Size = new System.Drawing.Size(50, 50);
+            this.spellTopF.TabIndex = 16;
+            // 
+            // spellJungleF
+            // 
+            this.spellJungleF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellJungleF.Location = new System.Drawing.Point(143, 115);
+            this.spellJungleF.Margin = new System.Windows.Forms.Padding(5);
+            this.spellJungleF.Name = "spellJungleF";
+            this.spellJungleF.Size = new System.Drawing.Size(50, 50);
+            this.spellJungleF.TabIndex = 17;
+            // 
+            // spellMiddleF
+            // 
+            this.spellMiddleF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellMiddleF.Location = new System.Drawing.Point(143, 175);
+            this.spellMiddleF.Margin = new System.Windows.Forms.Padding(5);
+            this.spellMiddleF.Name = "spellMiddleF";
+            this.spellMiddleF.Size = new System.Drawing.Size(50, 50);
+            this.spellMiddleF.TabIndex = 18;
+            // 
+            // spellSupportF
+            // 
+            this.spellSupportF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellSupportF.Location = new System.Drawing.Point(143, 295);
+            this.spellSupportF.Margin = new System.Windows.Forms.Padding(5);
+            this.spellSupportF.Name = "spellSupportF";
+            this.spellSupportF.Size = new System.Drawing.Size(50, 50);
+            this.spellSupportF.TabIndex = 19;
+            // 
+            // spellCarryF
+            // 
+            this.spellCarryF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.spellCarryF.Location = new System.Drawing.Point(143, 235);
+            this.spellCarryF.Margin = new System.Windows.Forms.Padding(5);
+            this.spellCarryF.Name = "spellCarryF";
+            this.spellCarryF.Size = new System.Drawing.Size(50, 50);
+            this.spellCarryF.TabIndex = 20;
+            // 
             // fSpells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +381,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(280, 370);
             this.ContextMenuStrip = this.menuSpells;
+            this.Controls.Add(this.spellCarryF);
+            this.Controls.Add(this.spellSupportF);
+            this.Controls.Add(this.spellMiddleF);
+            this.Controls.Add(this.spellJungleF);
+            this.Controls.Add(this.spellTopF);
+            this.Controls.Add(this.spellCarryD);
+            this.Controls.Add(this.spellSupportD);
+            this.Controls.Add(this.spellMiddleD);
+            this.Controls.Add(this.spellJungleD);
+            this.Controls.Add(this.spellTopD);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -321,11 +431,21 @@
         private System.Windows.Forms.ContextMenuStrip menuOptions;
         private System.Windows.Forms.ToolStripMenuItem editSpellsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showTimeInSecondsToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2HtmlToolTip playToolTip;
         private Guna.UI2.WinForms.Guna2HtmlToolTip editToolTip;
-        private Weby.CustomControls.Controls.DropDownMenu.WebyDropdownMenu menuSpells;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private SpellControl spellCarryF;
+        private SpellControl spellSupportF;
+        private SpellControl spellMiddleF;
+        private SpellControl spellJungleF;
+        private SpellControl spellTopF;
+        private SpellControl spellCarryD;
+        private SpellControl spellSupportD;
+        private SpellControl spellMiddleD;
+        private SpellControl spellJungleD;
+        private SpellControl spellTopD;
+        public Weby.CustomControls.Controls.DropDownMenu.WebyDropdownMenu menuSpells;
     }
 }

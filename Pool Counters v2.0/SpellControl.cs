@@ -12,7 +12,7 @@ namespace Pool_Counters_v2._0
 {
     public partial class SpellControl : UserControl
     {
-        Spell spell;
+        public Spell spell;
         TimeSpan actualTime = new TimeSpan(0);
 
         public SpellControl()
@@ -30,7 +30,7 @@ namespace Pool_Counters_v2._0
             this.pctSpell.Image = Properties.Resources.CounterControlBackground;
         }
 
-        private void SetSpell(Spell spell)
+        public void SetSpell(Spell spell)
         {
             this.spell = spell;
             this.pctSpell.BackgroundImage = spell.Icon;

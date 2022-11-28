@@ -1,4 +1,6 @@
-﻿namespace Pool_Counters_v2._0
+﻿using System.Drawing;
+
+namespace Pool_Counters_v2._0
 {
     partial class SpellControl
     {

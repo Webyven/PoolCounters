@@ -17,5 +17,21 @@ namespace Pool_Counters_v2._0
         {
             return Spells.Find(x => x.Name.ToLower() == text.ToLower());
         }
+
+        public static Spell[,] DefaultSpells()
+        {
+            Spell flash = FindSpell("Flash");
+
+            Spell[,] spells = new Spell[,]
+            {
+                { flash, FindSpell("Teleport") },
+                { flash, FindSpell("Smite") },
+                { flash, FindSpell("Ignite") },
+                { flash, FindSpell("Exhaust") },
+                { flash, FindSpell("Heal") }
+            };
+
+            return spells;
+        }
     }
 }
