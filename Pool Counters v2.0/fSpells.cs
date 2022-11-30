@@ -17,7 +17,7 @@ namespace Pool_Counters_v2._0
         Guna2GradientPanel ITitleable.titleBar => this.titleBar;
         IKeyboardMouseEvents m_GlobalHook;
         SpellControl[,] spells = new SpellControl[5,2];
-        int[,] actualFocus = new int[1, 2] { { 0, 0 } }; 
+        int[,] actualFocus = new int[1, 2] { { 0, 0 } };
 
         public fSpells()
         {
@@ -76,6 +76,12 @@ namespace Pool_Counters_v2._0
         private void pctTitleBar_MouseUp(object sender, MouseEventArgs e)
         {
             menuOptions.Show(this.pctTitleBar, this.pctTitleBar.Location.X, 30);
+        }
+
+        private void showTimeInSecondsToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.showTimeInSeconds = showTimeInSecondsToolStripMenuItem.Checked;
+            Properties.Settings.Default.Save();
         }
     }
 }

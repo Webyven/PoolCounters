@@ -43,7 +43,7 @@ namespace Pool_Counters_v2._0
             this.lblTimer.Visible = true;
             this.lblTimer.ForeColor = Color.White;
             this.guna2Panel1.ForeColor = Color.White;
-            this.lblTimer.Text = string.Format("{0}:{1}", this.actualTime.Minutes.ToString("00"), this.actualTime.Seconds.ToString("00"));
+            this.lblTimer.Text = FormatTime(actualTime);
             this.pctSpell.Image = Properties.Resources.Opacity;
         }
 
@@ -53,7 +53,7 @@ namespace Pool_Counters_v2._0
 
             if(this.actualTime.TotalSeconds > 0)
             {
-                this.lblTimer.Text = string.Format("{0}:{1}", this.actualTime.Minutes.ToString("00"), this.actualTime.Seconds.ToString("00"));
+                this.lblTimer.Text = FormatTime(actualTime);
             }
             else
             {
@@ -61,6 +61,14 @@ namespace Pool_Counters_v2._0
                 this.lblTimer.Text = "";
                 this.timer.Enabled = false;
             }
+        }
+
+        private string FormatTime(TimeSpan time)
+        {
+            if (Properties.Settings.Default.showTimeInSeconds)
+                return time.TotalSeconds.ToString() + "s";
+            else
+                return string.Format("{0}:{1}", this.actualTime.Minutes.ToString("00"), this.actualTime.Seconds.ToString("00"));
         }
     }
 }

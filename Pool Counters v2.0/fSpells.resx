@@ -169,10 +169,13 @@
   <metadata name="playToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>696, 17</value>
   </metadata>
+  <metadata name="editToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>811, 17</value>
+  </metadata>
   <data name="guna2ImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAIjBJREFUeF7t3XGkdfe5J/CrdDKiLlWlSkWImNxMZqpKlaoyRqkQEaLUGMYYrnJV
+        DQAACw0B7QfALAAAIjBJREFUeF7t3XGkdfe5J/CrdDKiLlWlSkWImNxMZqpKlaoyRqkQEaLUGMYYrnJV
         qEvVMMYwhhGlSo3LNUqVUUOFqlIVKlzjclWJUlGuS12lrv6deb5v86bnPXnOOWvvs/bea/1+ny8fmqdv
         3jdn73fvtdbv96xn/cnbb799m3/d1ACA7bv1GN4W3+HgDwD7duOxvCu+r/yrazUAYJ9yTM+x/ZH6I/9Q
         8gv+5bUaALBvObY/chJw9f/8Z+WZK/8MAIzjX5Qc6x/888NiCq78AWBsOQn45/nf+YfHy5/lHwCA4WW1
@@ -321,9 +324,6 @@
         I3v7T/4/z00Ra5gAO2wAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="editToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>811, 17</value>
-  </metadata>
   <data name="pctTitleBar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAajtJREFUeF7t
@@ -1563,6 +1563,9 @@
   </metadata>
   <metadata name="menuOptions.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>456, 17</value>
+  </metadata>
+  <metadata name="editToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>811, 17</value>
   </metadata>
   <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>924, 17</value>

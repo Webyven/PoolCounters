@@ -85,7 +85,7 @@
             this.titleBar.Location = new System.Drawing.Point(0, 0);
             this.titleBar.Name = "titleBar";
             this.titleBar.ShadowDecoration.Parent = this.titleBar;
-            this.titleBar.Size = new System.Drawing.Size(280, 30);
+            this.titleBar.Size = new System.Drawing.Size(220, 30);
             this.titleBar.TabIndex = 4;
             // 
             // btnPlay
@@ -97,7 +97,7 @@
             this.btnPlay.HoverState.Parent = this.btnPlay;
             this.btnPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnPlay.Image")));
             this.btnPlay.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnPlay.Location = new System.Drawing.Point(155, 0);
+            this.btnPlay.Location = new System.Drawing.Point(95, 0);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.PressedState.ImageSize = new System.Drawing.Size(13, 13);
             this.btnPlay.PressedState.Parent = this.btnPlay;
@@ -116,7 +116,7 @@
             this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(195, 0);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(135, 0);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(13, 13);
             this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
@@ -133,7 +133,7 @@
             this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(235, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(175, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
@@ -233,7 +233,7 @@
             this.editSpellsToolStripMenuItem,
             this.showTimeInSecondsToolStripMenuItem});
             this.menuOptions.Name = "menuOptions";
-            this.menuOptions.Size = new System.Drawing.Size(190, 48);
+            this.menuOptions.Size = new System.Drawing.Size(190, 70);
             // 
             // editSpellsToolStripMenuItem
             // 
@@ -247,6 +247,7 @@
             this.showTimeInSecondsToolStripMenuItem.Name = "showTimeInSecondsToolStripMenuItem";
             this.showTimeInSecondsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.showTimeInSecondsToolStripMenuItem.Text = "Show time in seconds";
+            this.showTimeInSecondsToolStripMenuItem.CheckedChanged += new System.EventHandler(this.showTimeInSecondsToolStripMenuItem_CheckedChanged);
             // 
             // playToolTip
             // 
@@ -379,7 +380,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(280, 370);
+            this.ClientSize = new System.Drawing.Size(220, 370);
             this.ContextMenuStrip = this.menuSpells;
             this.Controls.Add(this.spellCarryF);
             this.Controls.Add(this.spellSupportF);

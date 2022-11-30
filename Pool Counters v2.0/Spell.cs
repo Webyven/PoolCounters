@@ -20,7 +20,7 @@ namespace Pool_Counters_v2._0
         {
             Name = name;
             Icon = icon;
-            DefaultCooldown = new TimeSpan(0, 0, 10);
+            DefaultCooldown = new TimeSpan(0, 5, 0);
         }
 
         public void SetBaseCooldown(int cooldown)

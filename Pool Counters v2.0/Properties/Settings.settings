@@ -53,8 +53,11 @@
     <Setting Name="draftMusic" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="spells" Type="System.String" Scope="User">
+    <Setting Name="defaultSpells" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="showTimeInSeconds" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>
