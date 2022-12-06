@@ -190,7 +190,7 @@ namespace Pool_Counters_v2._0.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
         public int rolePadding {
             get {
                 return ((int)(this["rolePadding"]));
@@ -245,6 +245,42 @@ namespace Pool_Counters_v2._0.Properties {
             }
             set {
                 this["showTimeInSeconds"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool editSpellsMode {
+            get {
+                return ((bool)(this["editSpellsMode"]));
+            }
+            set {
+                this["editSpellsMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string spellsRoles {
+            get {
+                return ((string)(this["spellsRoles"]));
+            }
+            set {
+                this["spellsRoles"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool autoStartSpells {
+            get {
+                return ((bool)(this["autoStartSpells"]));
+            }
+            set {
+                this["autoStartSpells"] = value;
             }
         }
     }

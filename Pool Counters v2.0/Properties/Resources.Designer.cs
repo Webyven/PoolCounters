@@ -97,6 +97,46 @@ namespace Pool_Counters_v2._0.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Barrier {
+            get {
+                object obj = ResourceManager.GetObject("Barrier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cancel {
+            get {
+                object obj = ResourceManager.GetObject("Cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Clarity {
+            get {
+                object obj = ResourceManager.GetObject("Clarity", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cleanse {
+            get {
+                object obj = ResourceManager.GetObject("Cleanse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CounterControlBackground {
             get {
                 object obj = ResourceManager.GetObject("CounterControlBackground", resourceCulture);
@@ -136,9 +176,69 @@ namespace Pool_Counters_v2._0.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Edit {
+            get {
+                object obj = ResourceManager.GetObject("Edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Exhaust {
+            get {
+                object obj = ResourceManager.GetObject("Exhaust", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Flash {
+            get {
+                object obj = ResourceManager.GetObject("Flash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ghost {
+            get {
+                object obj = ResourceManager.GetObject("Ghost", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GoodCounter {
             get {
                 object obj = ResourceManager.GetObject("GoodCounter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Heal {
+            get {
+                object obj = ResourceManager.GetObject("Heal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ignite {
+            get {
+                object obj = ResourceManager.GetObject("Ignite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -149,6 +249,16 @@ namespace Pool_Counters_v2._0.Properties {
         internal static System.IO.UnmanagedMemoryStream MapAwarenessExercise {
             get {
                 return ResourceManager.GetStream("MapAwarenessExercise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mark {
+            get {
+                object obj = ResourceManager.GetObject("Mark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -185,6 +295,16 @@ namespace Pool_Counters_v2._0.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Opacity2 {
+            get {
+                object obj = ResourceManager.GetObject("Opacity2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pin {
             get {
                 object obj = ResourceManager.GetObject("pin", resourceCulture);
@@ -205,9 +325,107 @@ namespace Pool_Counters_v2._0.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Top {
+        internal static System.Drawing.Bitmap PlayButton {
             get {
-                object obj = ResourceManager.GetObject("Top", resourceCulture);
+                object obj = ResourceManager.GetObject("PlayButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Position_Grandmaster_Bot {
+            get {
+                object obj = ResourceManager.GetObject("Position_Grandmaster_Bot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Position_Grandmaster_Jungle {
+            get {
+                object obj = ResourceManager.GetObject("Position_Grandmaster_Jungle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Position_Grandmaster_Mid {
+            get {
+                object obj = ResourceManager.GetObject("Position_Grandmaster_Mid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Position_Grandmaster_Support {
+            get {
+                object obj = ResourceManager.GetObject("Position_Grandmaster_Support", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Position_Grandmaster_Top {
+            get {
+                object obj = ResourceManager.GetObject("Position_Grandmaster_Top", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Smite {
+            get {
+                object obj = ResourceManager.GetObject("Smite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Teleport:360
+        ///Flash:300
+        ///Clarity:240
+        ///Heal:240
+        ///Cleanse:210
+        ///Exhaust:210
+        ///Ghost:210
+        ///Barrier:180
+        ///Ignite:180
+        ///Smite:90.
+        /// </summary>
+        internal static string spells {
+            get {
+                return ResourceManager.GetString("spells", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StopIcon {
+            get {
+                object obj = ResourceManager.GetObject("StopIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Teleport {
+            get {
+                object obj = ResourceManager.GetObject("Teleport", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -238,6 +456,16 @@ namespace Pool_Counters_v2._0.Properties {
         internal static System.Drawing.Bitmap unpinWhite {
             get {
                 object obj = ResourceManager.GetObject("unpinWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UpgradedTeleport {
+            get {
+                object obj = ResourceManager.GetObject("UpgradedTeleport", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

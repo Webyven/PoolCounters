@@ -51,6 +51,8 @@
             this.optionsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editPoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editCountersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.spellTrackerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.updateChampsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -63,6 +65,7 @@
             this.musicMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.DraftMusic = new System.Windows.Forms.ToolStripMenuItem();
             this.MapAwarenessExercise = new System.Windows.Forms.ToolStripMenuItem();
+            this.spellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pctChamp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCounter0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCounter1)).BeginInit();
@@ -96,7 +99,7 @@
             this.txtChamp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtChamp.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtChamp.HoverState.Parent = this.txtChamp;
-            this.txtChamp.Location = new System.Drawing.Point(12, 145);
+            this.txtChamp.Location = new System.Drawing.Point(11, 144);
             this.txtChamp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtChamp.Name = "txtChamp";
             this.txtChamp.PasswordChar = '\0';
@@ -118,7 +121,7 @@
             this.btnCounter.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCounter.ForeColor = System.Drawing.Color.Black;
             this.btnCounter.HoverState.Parent = this.btnCounter;
-            this.btnCounter.Location = new System.Drawing.Point(12, 171);
+            this.btnCounter.Location = new System.Drawing.Point(11, 170);
             this.btnCounter.Name = "btnCounter";
             this.btnCounter.ShadowDecoration.Parent = this.btnCounter;
             this.btnCounter.Size = new System.Drawing.Size(95, 23);
@@ -135,7 +138,7 @@
             this.pctChamp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctChamp.Image = ((System.Drawing.Image)(resources.GetObject("pctChamp.Image")));
             this.pctChamp.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctChamp.InitialImage")));
-            this.pctChamp.Location = new System.Drawing.Point(12, 43);
+            this.pctChamp.Location = new System.Drawing.Point(11, 42);
             this.pctChamp.Name = "pctChamp";
             this.pctChamp.ShadowDecoration.Parent = this.pctChamp;
             this.pctChamp.Size = new System.Drawing.Size(95, 95);
@@ -152,7 +155,7 @@
             this.pctCounter0.BorderRadius = 3;
             this.pctCounter0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter0.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter0.InitialImage")));
-            this.pctCounter0.Location = new System.Drawing.Point(118, 43);
+            this.pctCounter0.Location = new System.Drawing.Point(117, 42);
             this.pctCounter0.Name = "pctCounter0";
             this.pctCounter0.ShadowDecoration.Parent = this.pctCounter0;
             this.pctCounter0.Size = new System.Drawing.Size(45, 45);
@@ -170,7 +173,7 @@
             this.pctCounter1.BorderRadius = 3;
             this.pctCounter1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter1.InitialImage")));
-            this.pctCounter1.Location = new System.Drawing.Point(169, 43);
+            this.pctCounter1.Location = new System.Drawing.Point(168, 42);
             this.pctCounter1.Name = "pctCounter1";
             this.pctCounter1.ShadowDecoration.Parent = this.pctCounter1;
             this.pctCounter1.Size = new System.Drawing.Size(45, 45);
@@ -188,7 +191,7 @@
             this.pctCounter2.BorderRadius = 3;
             this.pctCounter2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter2.InitialImage")));
-            this.pctCounter2.Location = new System.Drawing.Point(220, 43);
+            this.pctCounter2.Location = new System.Drawing.Point(219, 42);
             this.pctCounter2.Name = "pctCounter2";
             this.pctCounter2.ShadowDecoration.Parent = this.pctCounter2;
             this.pctCounter2.Size = new System.Drawing.Size(45, 45);
@@ -206,7 +209,7 @@
             this.pctCounter3.BorderRadius = 3;
             this.pctCounter3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter3.InitialImage")));
-            this.pctCounter3.Location = new System.Drawing.Point(118, 96);
+            this.pctCounter3.Location = new System.Drawing.Point(117, 95);
             this.pctCounter3.Name = "pctCounter3";
             this.pctCounter3.ShadowDecoration.Parent = this.pctCounter3;
             this.pctCounter3.Size = new System.Drawing.Size(45, 45);
@@ -224,7 +227,7 @@
             this.pctCounter4.BorderRadius = 3;
             this.pctCounter4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter4.InitialImage")));
-            this.pctCounter4.Location = new System.Drawing.Point(169, 96);
+            this.pctCounter4.Location = new System.Drawing.Point(168, 95);
             this.pctCounter4.Name = "pctCounter4";
             this.pctCounter4.ShadowDecoration.Parent = this.pctCounter4;
             this.pctCounter4.Size = new System.Drawing.Size(45, 45);
@@ -242,7 +245,7 @@
             this.pctCounter5.BorderRadius = 3;
             this.pctCounter5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter5.InitialImage")));
-            this.pctCounter5.Location = new System.Drawing.Point(219, 96);
+            this.pctCounter5.Location = new System.Drawing.Point(218, 95);
             this.pctCounter5.Name = "pctCounter5";
             this.pctCounter5.ShadowDecoration.Parent = this.pctCounter5;
             this.pctCounter5.Size = new System.Drawing.Size(45, 45);
@@ -260,7 +263,7 @@
             this.pctCounter6.BorderRadius = 3;
             this.pctCounter6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter6.InitialImage")));
-            this.pctCounter6.Location = new System.Drawing.Point(118, 149);
+            this.pctCounter6.Location = new System.Drawing.Point(117, 148);
             this.pctCounter6.Name = "pctCounter6";
             this.pctCounter6.ShadowDecoration.Parent = this.pctCounter6;
             this.pctCounter6.Size = new System.Drawing.Size(45, 45);
@@ -278,7 +281,7 @@
             this.pctCounter7.BorderRadius = 3;
             this.pctCounter7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter7.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter7.InitialImage")));
-            this.pctCounter7.Location = new System.Drawing.Point(169, 149);
+            this.pctCounter7.Location = new System.Drawing.Point(168, 148);
             this.pctCounter7.Name = "pctCounter7";
             this.pctCounter7.ShadowDecoration.Parent = this.pctCounter7;
             this.pctCounter7.Size = new System.Drawing.Size(45, 45);
@@ -296,7 +299,7 @@
             this.pctCounter8.BorderRadius = 3;
             this.pctCounter8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctCounter8.InitialImage = ((System.Drawing.Image)(resources.GetObject("pctCounter8.InitialImage")));
-            this.pctCounter8.Location = new System.Drawing.Point(220, 149);
+            this.pctCounter8.Location = new System.Drawing.Point(219, 148);
             this.pctCounter8.Name = "pctCounter8";
             this.pctCounter8.ShadowDecoration.Parent = this.pctCounter8;
             this.pctCounter8.Size = new System.Drawing.Size(45, 45);
@@ -322,7 +325,7 @@
             this.titleBar.Location = new System.Drawing.Point(0, 0);
             this.titleBar.Name = "titleBar";
             this.titleBar.ShadowDecoration.Parent = this.titleBar;
-            this.titleBar.Size = new System.Drawing.Size(276, 30);
+            this.titleBar.Size = new System.Drawing.Size(275, 30);
             this.titleBar.TabIndex = 39;
             // 
             // btnHelp
@@ -332,7 +335,7 @@
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnHelp.HoverState.Parent = this.btnHelp;
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
-            this.btnHelp.Location = new System.Drawing.Point(151, 0);
+            this.btnHelp.Location = new System.Drawing.Point(150, 0);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.PressedState.Parent = this.btnHelp;
             this.btnHelp.Size = new System.Drawing.Size(40, 30);
@@ -349,7 +352,7 @@
             this.btnMusic.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMusic.HoverState.Parent = this.btnMusic;
             this.btnMusic.Image = global::Pool_Counters_v2._0.Properties.Resources.Muted;
-            this.btnMusic.Location = new System.Drawing.Point(191, 0);
+            this.btnMusic.Location = new System.Drawing.Point(190, 0);
             this.btnMusic.Margin = new System.Windows.Forms.Padding(2);
             this.btnMusic.Name = "btnMusic";
             this.btnMusic.PressedState.Parent = this.btnMusic;
@@ -393,7 +396,7 @@
             this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(231, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(230, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
@@ -407,49 +410,63 @@
             this.optionsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editPoolToolStripMenuItem,
             this.editCountersToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.spellTrackerToolStripMenuItem,
             this.toolStripSeparator1,
             this.updateChampsToolStripMenuItem,
             this.toolStripSeparator3,
             this.exitToolStripMenuItem});
             this.optionsMenu.Name = "optionsMenu";
             this.optionsMenu.ShowImageMargin = false;
-            this.optionsMenu.Size = new System.Drawing.Size(142, 104);
+            this.optionsMenu.Size = new System.Drawing.Size(144, 132);
             // 
             // editPoolToolStripMenuItem
             // 
             this.editPoolToolStripMenuItem.Name = "editPoolToolStripMenuItem";
-            this.editPoolToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.editPoolToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.editPoolToolStripMenuItem.Text = "Edit Pool...";
             this.editPoolToolStripMenuItem.Click += new System.EventHandler(this.editPoolToolStripMenuItem_Click);
             // 
             // editCountersToolStripMenuItem
             // 
             this.editCountersToolStripMenuItem.Name = "editCountersToolStripMenuItem";
-            this.editCountersToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.editCountersToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.editCountersToolStripMenuItem.Text = "Edit Counters...";
             this.editCountersToolStripMenuItem.Click += new System.EventHandler(this.editCountersToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(140, 6);
+            // 
+            // spellTrackerToolStripMenuItem
+            // 
+            this.spellTrackerToolStripMenuItem.Name = "spellTrackerToolStripMenuItem";
+            this.spellTrackerToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.spellTrackerToolStripMenuItem.Text = "Spell Tracker";
+            this.spellTrackerToolStripMenuItem.Click += new System.EventHandler(this.spellTrackerToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(140, 6);
             // 
             // updateChampsToolStripMenuItem
             // 
             this.updateChampsToolStripMenuItem.Name = "updateChampsToolStripMenuItem";
-            this.updateChampsToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.updateChampsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.updateChampsToolStripMenuItem.Text = "Update Champs...";
             this.updateChampsToolStripMenuItem.Click += new System.EventHandler(this.updateChampsToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(138, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(140, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -469,7 +486,7 @@
             // 
             this.extraInfoToolStripMenuItem.Name = "extraInfoToolStripMenuItem";
             this.extraInfoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.extraInfoToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
+            this.extraInfoToolStripMenuItem.Size = new System.Drawing.Size(66, 22);
             this.extraInfoToolStripMenuItem.Text = "ExtraInfo";
             this.extraInfoToolStripMenuItem.Click += new System.EventHandler(this.extraInfoToolStripMenuItem_Click);
             // 
@@ -477,7 +494,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.extraInfoToolStripMenuItem});
+            this.extraInfoToolStripMenuItem,
+            this.spellsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -495,21 +513,29 @@
             this.MapAwarenessExercise});
             this.musicMenu.Name = "optionsMenu";
             this.musicMenu.ShowImageMargin = false;
-            this.musicMenu.Size = new System.Drawing.Size(174, 48);
+            this.musicMenu.Size = new System.Drawing.Size(178, 48);
             // 
             // DraftMusic
             // 
             this.DraftMusic.Name = "DraftMusic";
-            this.DraftMusic.Size = new System.Drawing.Size(173, 22);
+            this.DraftMusic.Size = new System.Drawing.Size(177, 22);
             this.DraftMusic.Text = "Draft - Season 1";
             this.DraftMusic.Click += new System.EventHandler(this.Music_Click);
             // 
             // MapAwarenessExercise
             // 
             this.MapAwarenessExercise.Name = "MapAwarenessExercise";
-            this.MapAwarenessExercise.Size = new System.Drawing.Size(173, 22);
+            this.MapAwarenessExercise.Size = new System.Drawing.Size(177, 22);
             this.MapAwarenessExercise.Text = "Map Awareness Exercise";
             this.MapAwarenessExercise.Click += new System.EventHandler(this.Music_Click);
+            // 
+            // spellsToolStripMenuItem
+            // 
+            this.spellsToolStripMenuItem.Name = "spellsToolStripMenuItem";
+            this.spellsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.spellsToolStripMenuItem.Size = new System.Drawing.Size(49, 22);
+            this.spellsToolStripMenuItem.Text = "Spells";
+            this.spellsToolStripMenuItem.Click += new System.EventHandler(this.spellsToolStripMenuItem_Click);
             // 
             // PoolCounters
             // 
@@ -517,7 +543,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(276, 206);
+            this.ClientSize = new System.Drawing.Size(275, 205);
             this.Controls.Add(this.titleBar);
             this.Controls.Add(this.btnCounter);
             this.Controls.Add(this.txtChamp);
@@ -600,6 +626,9 @@
         private System.Windows.Forms.ContextMenuStrip musicMenu;
         private System.Windows.Forms.ToolStripMenuItem DraftMusic;
         private System.Windows.Forms.ToolStripMenuItem MapAwarenessExercise;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem spellTrackerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spellsToolStripMenuItem;
     }
 }
 

@@ -13,7 +13,6 @@ namespace Pool_Counters_v2._0
         public static string RESOURCES_CHAMPIONS = Path.Combine(RESOURCES, "Champions");
         public static string RESOURCES_POSITIONS = Path.Combine(RESOURCES, "Positions");
         public static string RESOURCES_BUILDS = Path.Combine(RESOURCES, "Builds");
-        public static string RESOURCES_SPELLS = Path.Combine(RESOURCES, "Spells");
         public const string countersFile = "counters.pc";
     }
 

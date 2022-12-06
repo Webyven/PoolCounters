@@ -27,7 +27,7 @@ namespace Pool_Counters_v2._0
             string rolePath = SoloQ ? Properties.Settings.Default.playerRoleSolo : Properties.Settings.Default.playerRoleFlex;
 
             this.openFileDialog1.InitialDirectory = DEFAULT_PATHS.RESOURCES_POSITIONS;
-            this.pctRole.Image = File.Exists(rolePath) ? Image.FromFile(rolePath) : Properties.Resources.Top;
+            this.pctRole.Image = File.Exists(rolePath) ? Image.FromFile(rolePath) : Properties.Resources.Position_Grandmaster_Top;
             this.txtNickname.Text = Properties.Settings.Default.playerNickname;
             this.txtRealNickname.Text = Properties.Settings.Default.playerRealNickname;
 

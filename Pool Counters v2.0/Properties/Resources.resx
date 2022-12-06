@@ -204,9 +204,6 @@ Yone;Hermano del chachuo</value>
   <data name="DeleteChamp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DeleteChamp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Top" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="GoodCounter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GoodCounter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -224,5 +221,83 @@ Yone;Hermano del chachuo</value>
   </data>
   <data name="Opacity" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Opacity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Position_Grandmaster_Bot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Positions\Colored\Position_Grandmaster-Bot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Position_Grandmaster_Jungle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Positions\Colored\Position_Grandmaster-Jungle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Position_Grandmaster_Mid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Positions\Colored\Position_Grandmaster-Mid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Position_Grandmaster_Support" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Positions\Colored\Position_Grandmaster-Support.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Position_Grandmaster_Top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Positions\Colored\Position_Grandmaster-Top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StopIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StopIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spells" xml:space="preserve">
+    <value>Teleport:360
+Flash:300
+Clarity:240
+Heal:240
+Cleanse:210
+Exhaust:210
+Ghost:210
+Barrier:180
+Ignite:180
+Smite:90</value>
+  </data>
+  <data name="Barrier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Barrier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Clarity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Clarity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cleanse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Cleanse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exhaust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Exhaust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Flash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Flash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ghost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Ghost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ignite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Ignite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Mark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Smite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Smite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Teleport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\Teleport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UpgradedTeleport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Release\Resources\Spells\UpgradedTeleport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Opacity2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Opacity2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

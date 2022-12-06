@@ -39,7 +39,7 @@ namespace Pool_Counters_v2._0
         {
             string rolePath = SoloQ ? Properties.Settings.Default.playerRoleSolo : Properties.Settings.Default.playerRoleFlex;
 
-            this.pctRole.Image = File.Exists(rolePath) ? Image.FromFile(rolePath) : Properties.Resources.Top;
+            this.pctRole.Image = File.Exists(rolePath) ? Image.FromFile(rolePath) : Properties.Resources.Position_Grandmaster_Top;
             this.lblOpGg.Text = Properties.Settings.Default.playerNickname;
             this.pctRole.Padding = new Padding(Properties.Settings.Default.rolePadding);
 

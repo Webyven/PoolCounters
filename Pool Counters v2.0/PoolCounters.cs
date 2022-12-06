@@ -37,7 +37,7 @@ namespace Pool_Counters_v2._0
             InitializeComponent();
             InitializeApplication();
 
-            new fSpells().ShowDialog();
+            spellTrackerToolStripMenuItem_Click(null, null);
         }
 
         private void InitializeApplication()
@@ -94,7 +94,13 @@ namespace Pool_Counters_v2._0
             spawnForm1.X = Screen.GetWorkingArea(this).Right - (this.Size.Width) - 15;
             spawnForm1.Y = poolForm.Height + 30;
 
+            Point spawnSpellsPoint = new Point(spawnForm1.X, spawnForm1.Y + this.Height + 15);
+
             this.Location = spawnForm1;
+
+            spells = new fSpells();
+            spells.Location = spawnSpellsPoint;
+            spells.Show();
 
             if (!Properties.Settings.Default.mainLocation.IsEmpty)
                 this.Location = Properties.Settings.Default.mainLocation;
@@ -237,17 +243,23 @@ namespace Pool_Counters_v2._0
 
         private void ChargeSpells()
         {
-            if (Directory.Exists(DEFAULT_PATHS.RESOURCES_SPELLS))
+            string[] allCooldowns = Properties.Resources.spells.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            foreach(string cooldown in allCooldowns)
             {
-                foreach (string square in Directory.GetFiles(DEFAULT_PATHS.RESOURCES_SPELLS))
-                {
-                    string fileName = Path.GetFileName(square);
-                    string spellName = fileName.Substring(0, fileName.IndexOf("Square"));
+                string[] splitted = cooldown.Split(':');
 
-                    Spell spell = new Spell(spellName, Image.FromFile(square));
+                string spellName = splitted[0];
+                int spellCooldown = int.Parse(splitted[1]);
 
-                    SpellManager.AddSpell(spell);
-                }
+                Spell spell = new Spell(spellName, spellCooldown);
+
+                Image spellImage = (Image)Properties.Resources.ResourceManager.GetObject(spellName);
+
+                if (spellImage != null)
+                    spell.SetIcon(spellImage);
+
+                SpellManager.AddSpell(spell);
             }
         }
 
@@ -590,6 +602,31 @@ namespace Pool_Counters_v2._0
         private void Music_Click(object sender, EventArgs e)
         {
             DraftMusicManager.SetMusic(Properties.Resources.ResourceManager.GetStream(((ToolStripMenuItem)sender).Name));
+        }
+
+        fSpells spells = null;
+
+        private void spellTrackerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (spells == null)
+            {
+                spells = new fSpells();
+                spells.Show();
+
+                spells.FormClosed += (object s, FormClosedEventArgs arg) => { this.spells = null; };
+            }
+            else
+            {
+                spells.TopLevel = true;
+                spells.WindowState = FormWindowState.Normal;
+                spells.Focus();
+            }
+                
+        }
+
+        private void spellsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            spellTrackerToolStripMenuItem_Click(null, null);
         }
     }
 }
