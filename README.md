@@ -1,4 +1,4 @@
-# 🧠 Pool Counters
+# ⚔️ Pool Counters
 
 **Pool Counters** es una aplicación de escritorio desarrollada en **WinForms** para jugadores de *League of Legends*. Su objetivo es brindar asistencia durante la selección de campeones, ayudando a contrarrestar al equipo enemigo y gestionar información clave en tiempo real.
 
